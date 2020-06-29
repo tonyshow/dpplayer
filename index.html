@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>🎬电影栏目组</title>
+
+</head>
+
+<body>
+    <div id="dplayer"></div>
+</body>
+
+</html>
+<script src="dplayer/DPlayer.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/hls.js/0.12.4/hls.min.js"></script>
+<script>
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        autoplay: true, // 可选，自动播放视频，不支持移动浏览器 
+        loop: true, // 可选，循环播放音乐，默认：true  
+
+        hotkey: true,
+        video: {
+            url: 'https://xx/index.m3u8',
+            autoplay: true,
+        },
+        preload: 'none',
+    });
+</script>
